@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.peitu.doorplateqrcode.mapper.DoorplateInfoMapper">
+    <resultMap id="BaseResultMap" type="com.peitu.doorplateqrcode.entity.DoorplateInfo">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="VARCHAR"/>
+        <result column="gmt_modified" property="gmtModified" jdbcType="VARCHAR"/>
+        <result column="administrative_code" property="administrativeCode" jdbcType="VARCHAR"/>
+        <result column="neighborhood_committee_tel" property="neighborhoodCommitteeTel" jdbcType="VARCHAR"/>
+        <result column="neighborhood_committee_ad" property="neighborhoodCommitteeAd" jdbcType="VARCHAR"/>
+        <result column="police_station" property="policeStation" jdbcType="VARCHAR"/>
+        <result column="police_station_tel" property="policeStationTel" jdbcType="VARCHAR"/>
+        <result column="police_station_ad" property="policeStationAd" jdbcType="VARCHAR"/>
+        <result column="doorplate_name" property="doorplateName" jdbcType="VARCHAR"/>
+        <result column="doorplate_num" property="doorplateNum" jdbcType="VARCHAR"/>
+        <result column="idcode" property="idcode" jdbcType="VARCHAR"/>
+        <result column="classes" property="classes" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+    id, gmt_create, gmt_modified, administrative_code, neighborhood_committee_tel, neighborhood_committee_ad, 
+    police_station, police_station_tel, police_station_ad, doorplate_name, doorplate_num, 
+    idcode, classes, state
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from doorplate_info
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from doorplate_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+    <insert id="insert" parameterType="com.peitu.doorplateqrcode.entity.DoorplateInfo">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into doorplate_info (id, gmt_create, gmt_modified,
+        administrative_code, neighborhood_committee_tel,
+        neighborhood_committee_ad, police_station,
+        police_station_tel, police_station_ad, doorplate_name,
+        doorplate_num, idcode, classes,
+        state)
+        values (#{id,jdbcType=INTEGER}, #{gmtCreate,jdbcType=VARCHAR}, #{gmtModified,jdbcType=VARCHAR},
+        #{administrativeCode,jdbcType=VARCHAR}, #{neighborhoodCommitteeTel,jdbcType=VARCHAR},
+        #{neighborhoodCommitteeAd,jdbcType=VARCHAR}, #{policeStation,jdbcType=VARCHAR},
+        #{policeStationTel,jdbcType=VARCHAR}, #{policeStationAd,jdbcType=VARCHAR}, #{doorplateName,jdbcType=VARCHAR},
+        #{doorplateNum,jdbcType=VARCHAR}, #{idcode,jdbcType=VARCHAR}, #{classes,jdbcType=VARCHAR},
+        #{state,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="com.peitu.doorplateqrcode.entity.DoorplateInfo">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into doorplate_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            id,
+            <if test="gmtCreate != null">
+                gmt_create,
+            </if>
+            <if test="gmtModified != null">
+                gmt_modified,
+            </if>
+            <if test="administrativeCode != null">
+                administrative_code,
+            </if>
+            <if test="neighborhoodCommitteeTel != null">
+                neighborhood_committee_tel,
+            </if>
+            <if test="neighborhoodCommitteeAd != null">
+                neighborhood_committee_ad,
+            </if>
+            <if test="policeStation != null">
+                police_station,
+            </if>
+            <if test="policeStationTel != null">
+                police_station_tel,
+            </if>
+            <if test="policeStationAd != null">
+                police_station_ad,
+            </if>
+            <if test="doorplateName != null">
+                doorplate_name,
+            </if>
+            <if test="doorplateNum != null">
+                doorplate_num,
+            </if>
+            <if test="idcode != null">
+                idcode,
+            </if>
+            <if test="classes != null">
+                classes,
+            </if>
+            <if test="state != null">
+                state,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{id,jdbcType=INTEGER},
+            <if test="gmtCreate != null">
+                #{gmtCreate,jdbcType=VARCHAR},
+            </if>
+            <if test="gmtModified != null">
+                #{gmtModified,jdbcType=VARCHAR},
+            </if>
+            <if test="administrativeCode != null">
+                #{administrativeCode,jdbcType=VARCHAR},
+            </if>
+            <if test="neighborhoodCommitteeTel != null">
+                #{neighborhoodCommitteeTel,jdbcType=VARCHAR},
+            </if>
+            <if test="neighborhoodCommitteeAd != null">
+                #{neighborhoodCommitteeAd,jdbcType=VARCHAR},
+            </if>
+            <if test="policeStation != null">
+                #{policeStation,jdbcType=VARCHAR},
+            </if>
+            <if test="policeStationTel != null">
+                #{policeStationTel,jdbcType=VARCHAR},
+            </if>
+            <if test="policeStationAd != null">
+                #{policeStationAd,jdbcType=VARCHAR},
+            </if>
+            <if test="doorplateName != null">
+                #{doorplateName,jdbcType=VARCHAR},
+            </if>
+            <if test="doorplateNum != null">
+                #{doorplateNum,jdbcType=VARCHAR},
+            </if>
+            <if test="idcode != null">
+                #{idcode,jdbcType=VARCHAR},
+            </if>
+            <if test="classes != null">
+                #{classes,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                #{state,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.peitu.doorplateqrcode.entity.DoorplateInfo">
+        update doorplate_info
+        <set>
+            <if test="gmtCreate != null">
+                gmt_create = #{gmtCreate,jdbcType=VARCHAR},
+            </if>
+            <if test="gmtModified != null">
+                gmt_modified = #{gmtModified,jdbcType=VARCHAR},
+            </if>
+            <if test="administrativeCode != null">
+                administrative_code = #{administrativeCode,jdbcType=VARCHAR},
+            </if>
+            <if test="neighborhoodCommitteeTel != null">
+                neighborhood_committee_tel = #{neighborhoodCommitteeTel,jdbcType=VARCHAR},
+            </if>
+            <if test="neighborhoodCommitteeAd != null">
+                neighborhood_committee_ad = #{neighborhoodCommitteeAd,jdbcType=VARCHAR},
+            </if>
+            <if test="policeStation != null">
+                police_station = #{policeStation,jdbcType=VARCHAR},
+            </if>
+            <if test="policeStationTel != null">
+                police_station_tel = #{policeStationTel,jdbcType=VARCHAR},
+            </if>
+            <if test="policeStationAd != null">
+                police_station_ad = #{policeStationAd,jdbcType=VARCHAR},
+            </if>
+            <if test="doorplateName != null">
+                doorplate_name = #{doorplateName,jdbcType=VARCHAR},
+            </if>
+            <if test="doorplateNum != null">
+                doorplate_num = #{doorplateNum,jdbcType=VARCHAR},
+            </if>
+            <if test="idcode != null">
+                idcode = #{idcode,jdbcType=VARCHAR},
+            </if>
+            <if test="classes != null">
+                classes = #{classes,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                state = #{state,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.peitu.doorplateqrcode.entity.DoorplateInfo">
+    update doorplate_info
+    set gmt_create = #{gmtCreate,jdbcType=VARCHAR},
+      gmt_modified = #{gmtModified,jdbcType=VARCHAR},
+      administrative_code = #{administrativeCode,jdbcType=VARCHAR},
+      neighborhood_committee_tel = #{neighborhoodCommitteeTel,jdbcType=VARCHAR},
+      neighborhood_committee_ad = #{neighborhoodCommitteeAd,jdbcType=VARCHAR},
+      police_station = #{policeStation,jdbcType=VARCHAR},
+      police_station_tel = #{policeStationTel,jdbcType=VARCHAR},
+      police_station_ad = #{policeStationAd,jdbcType=VARCHAR},
+      doorplate_name = #{doorplateName,jdbcType=VARCHAR},
+      doorplate_num = #{doorplateNum,jdbcType=VARCHAR},
+      idcode = #{idcode,jdbcType=VARCHAR},
+      classes = #{classes,jdbcType=VARCHAR},
+      state = #{state,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/doorplate?characterEncoding=utf8&useSSL=true&serverTimezone=UTC&nullCatalogMeansCurrent=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    timeout: 5000s
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 20
+        min-idle: 1
+  activiti:
+    db-history-used: true
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+
+logging:
+  level:
+    root: info
+  path: ./logs/

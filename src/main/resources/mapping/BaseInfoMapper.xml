@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.peitu.doorplateqrcode.mapper.BaseInfoMapper">
+    <resultMap id="BaseResultMap" type="com.peitu.doorplateqrcode.entity.BaseInfo">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="VARCHAR"/>
+        <result column="gmt_modified" property="gmtModified" jdbcType="VARCHAR"/>
+        <result column="top_pic_path" property="topPicPath" jdbcType="VARCHAR"/>
+        <result column="foot_line1" property="footLine1" jdbcType="VARCHAR"/>
+        <result column="foot_line2" property="footLine2" jdbcType="VARCHAR"/>
+        <result column="foot_line3" property="footLine3" jdbcType="VARCHAR"/>
+        <result column="foot_line4" property="footLine4" jdbcType="VARCHAR"/>
+        <result column="foot_line5" property="footLine5" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+    id, gmt_create, gmt_modified, top_pic_path, foot_line1, foot_line2, foot_line3, foot_line4, 
+    foot_line5
+  </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from base_info
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from base_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+    <insert id="insert" parameterType="com.peitu.doorplateqrcode.entity.BaseInfo">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into base_info (id, gmt_create, gmt_modified,
+        top_pic_path, foot_line1, foot_line2,
+        foot_line3, foot_line4, foot_line5
+        )
+        values (#{id,jdbcType=INTEGER}, #{gmtCreate,jdbcType=VARCHAR}, #{gmtModified,jdbcType=VARCHAR},
+        #{topPicPath,jdbcType=VARCHAR}, #{footLine1,jdbcType=VARCHAR}, #{footLine2,jdbcType=VARCHAR},
+        #{footLine3,jdbcType=VARCHAR}, #{footLine4,jdbcType=VARCHAR}, #{footLine5,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective" parameterType="com.peitu.doorplateqrcode.entity.BaseInfo">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into base_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            id,
+            <if test="gmtCreate != null">
+                gmt_create,
+            </if>
+            <if test="gmtModified != null">
+                gmt_modified,
+            </if>
+            <if test="topPicPath != null">
+                top_pic_path,
+            </if>
+            <if test="footLine1 != null">
+                foot_line1,
+            </if>
+            <if test="footLine2 != null">
+                foot_line2,
+            </if>
+            <if test="footLine3 != null">
+                foot_line3,
+            </if>
+            <if test="footLine4 != null">
+                foot_line4,
+            </if>
+            <if test="footLine5 != null">
+                foot_line5,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{id,jdbcType=INTEGER},
+            <if test="gmtCreate != null">
+                #{gmtCreate,jdbcType=VARCHAR},
+            </if>
+            <if test="gmtModified != null">
+                #{gmtModified,jdbcType=VARCHAR},
+            </if>
+            <if test="topPicPath != null">
+                #{topPicPath,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine1 != null">
+                #{footLine1,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine2 != null">
+                #{footLine2,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine3 != null">
+                #{footLine3,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine4 != null">
+                #{footLine4,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine5 != null">
+                #{footLine5,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.peitu.doorplateqrcode.entity.BaseInfo">
+        update base_info
+        <set>
+            <if test="gmtCreate != null">
+                gmt_create = #{gmtCreate,jdbcType=VARCHAR},
+            </if>
+            <if test="gmtModified != null">
+                gmt_modified = #{gmtModified,jdbcType=VARCHAR},
+            </if>
+            <if test="topPicPath != null">
+                top_pic_path = #{topPicPath,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine1 != null">
+                foot_line1 = #{footLine1,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine2 != null">
+                foot_line2 = #{footLine2,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine3 != null">
+                foot_line3 = #{footLine3,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine4 != null">
+                foot_line4 = #{footLine4,jdbcType=VARCHAR},
+            </if>
+            <if test="footLine5 != null">
+                foot_line5 = #{footLine5,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.peitu.doorplateqrcode.entity.BaseInfo">
+    update base_info
+    set gmt_create = #{gmtCreate,jdbcType=VARCHAR},
+      gmt_modified = #{gmtModified,jdbcType=VARCHAR},
+      top_pic_path = #{topPicPath,jdbcType=VARCHAR},
+      foot_line1 = #{footLine1,jdbcType=VARCHAR},
+      foot_line2 = #{footLine2,jdbcType=VARCHAR},
+      foot_line3 = #{footLine3,jdbcType=VARCHAR},
+      foot_line4 = #{footLine4,jdbcType=VARCHAR},
+      foot_line5 = #{footLine5,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
