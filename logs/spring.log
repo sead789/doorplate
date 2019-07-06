@@ -120,3 +120,97 @@
 2019-07-06 15:05:19.635  INFO 9144 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
 2019-07-06 15:05:19.852 ERROR 9144 --- [http-nio-8080-exec-1] o.a.t.util.descriptor.web.LoginConfig    : 捕获到Exception异常java.lang.NullPointerException
 2019-07-06 15:06:14.128 ERROR 9144 --- [http-nio-8080-exec-3] o.a.t.util.descriptor.web.LoginConfig    : 必填校验异常:用户名不能为空(userName)
+2019-07-06 15:26:15.859  INFO 4652 --- [restartedMain] com.peitu.DoorplateQrcodeApplication     : Starting DoorplateQrcodeApplication on QCGH5SPSAIYGI4O with PID 4652 (E:\IdeaProjects\doorplate-qrcode\target\classes started by Administrator in E:\IdeaProjects\doorplate-qrcode)
+2019-07-06 15:26:15.868  INFO 4652 --- [restartedMain] com.peitu.DoorplateQrcodeApplication     : No active profile set, falling back to default profiles: default
+2019-07-06 15:26:16.408  INFO 4652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-06 15:26:16.409  INFO 4652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-06 15:26:19.205  INFO 4652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-06 15:26:19.209  INFO 4652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-06 15:26:19.276  INFO 4652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 0 repository interfaces.
+2019-07-06 15:26:20.000  INFO 4652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fc33bd08] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-06 15:26:20.831  INFO 4652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-06 15:26:20.879  INFO 4652 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-06 15:26:20.880  INFO 4652 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-07-06 15:26:21.143  INFO 4652 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-06 15:26:21.144  INFO 4652 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4734 ms
+2019-07-06 15:26:22.467  INFO 4652 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-06 15:26:22.609  INFO 4652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-06 15:26:22.812  INFO 4652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-06 15:26:23.810  INFO 4652 --- [restartedMain] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2019-07-06 15:26:23.812  INFO 4652 --- [restartedMain] o.a.e.i.a.AbstractAsyncJobExecutor       : Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+2019-07-06 15:26:23.814  INFO 4652 --- [Thread-23] o.a.e.i.a.AcquireTimerJobsRunnable       : starting to acquire async jobs due
+2019-07-06 15:26:23.814  INFO 4652 --- [Thread-24] o.a.e.i.a.AcquireAsyncJobsDueRunnable    : starting to acquire async jobs due
+2019-07-06 15:26:24.512  INFO 4652 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-06 15:26:24.703  INFO 4652 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-06 15:26:25.614  INFO 4652 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-07-06 15:26:25.648  INFO 4652 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-07-06 15:26:25.715  INFO 4652 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-07-06 15:26:26.059  INFO 4652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-06 15:26:26.066  INFO 4652 --- [restartedMain] com.peitu.DoorplateQrcodeApplication     : Started DoorplateQrcodeApplication in 11.923 seconds (JVM running for 15.424)
+2019-07-06 15:27:09.626  INFO 4652 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-06 15:27:09.627  INFO 4652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-06 15:27:09.643  INFO 4652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-07-06 15:27:52.171 ERROR 4652 --- [http-nio-8080-exec-1] o.a.t.util.descriptor.web.LoginConfig    : 捕获到Exception异常：java.lang.NullPointerException
+2019-07-06 15:28:33.380  INFO 5784 --- [restartedMain] com.peitu.DoorplateQrcodeApplication     : Starting DoorplateQrcodeApplication on QCGH5SPSAIYGI4O with PID 5784 (E:\IdeaProjects\doorplate-qrcode\target\classes started by Administrator in E:\IdeaProjects\doorplate-qrcode)
+2019-07-06 15:28:33.389  INFO 5784 --- [restartedMain] com.peitu.DoorplateQrcodeApplication     : No active profile set, falling back to default profiles: default
+2019-07-06 15:28:33.543  INFO 5784 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-06 15:28:33.544  INFO 5784 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-06 15:28:36.438  INFO 5784 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-06 15:28:36.443  INFO 5784 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-06 15:28:36.514  INFO 5784 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 0 repository interfaces.
+2019-07-06 15:28:37.205  INFO 5784 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$26460646] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-06 15:28:38.024  INFO 5784 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-06 15:28:38.067  INFO 5784 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-06 15:28:38.068  INFO 5784 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-07-06 15:28:38.297  INFO 5784 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-06 15:28:38.297  INFO 5784 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4752 ms
+2019-07-06 15:28:39.678  INFO 5784 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-06 15:28:39.813  INFO 5784 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-06 15:28:40.031  INFO 5784 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-06 15:28:41.029  INFO 5784 --- [restartedMain] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2019-07-06 15:28:41.031  INFO 5784 --- [restartedMain] o.a.e.i.a.AbstractAsyncJobExecutor       : Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+2019-07-06 15:28:41.032  INFO 5784 --- [Thread-23] o.a.e.i.a.AcquireTimerJobsRunnable       : starting to acquire async jobs due
+2019-07-06 15:28:41.035  INFO 5784 --- [Thread-24] o.a.e.i.a.AcquireAsyncJobsDueRunnable    : starting to acquire async jobs due
+2019-07-06 15:28:41.751  INFO 5784 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-06 15:28:41.965  INFO 5784 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-06 15:28:42.840  INFO 5784 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-07-06 15:28:42.873  INFO 5784 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-07-06 15:28:42.941  INFO 5784 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-07-06 15:28:43.243  INFO 5784 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-06 15:28:43.249  INFO 5784 --- [restartedMain] com.peitu.DoorplateQrcodeApplication     : Started DoorplateQrcodeApplication in 11.454 seconds (JVM running for 13.721)
+2019-07-06 15:29:27.066  INFO 5784 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-06 15:29:27.067  INFO 5784 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-06 15:29:27.084  INFO 5784 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-07-06 15:29:27.190 ERROR 5784 --- [http-nio-8080-exec-1] o.a.t.util.descriptor.web.LoginConfig    : 捕获到Exception异常：java.lang.NullPointerException
+2019-07-06 15:30:31.001 ERROR 5784 --- [http-nio-8080-exec-3] o.a.t.util.descriptor.web.LoginConfig    : 捕获到Exception异常：java.lang.NullPointerException
+2019-07-06 15:35:11.256  INFO 6976 --- [restartedMain] com.peitu.DoorplateQrcodeApplication     : Starting DoorplateQrcodeApplication on QCGH5SPSAIYGI4O with PID 6976 (E:\IdeaProjects\doorplate-qrcode\target\classes started by Administrator in E:\IdeaProjects\doorplate-qrcode)
+2019-07-06 15:35:11.264  INFO 6976 --- [restartedMain] com.peitu.DoorplateQrcodeApplication     : No active profile set, falling back to default profiles: default
+2019-07-06 15:35:11.420  INFO 6976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-06 15:35:11.421  INFO 6976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-06 15:35:13.910  INFO 6976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-06 15:35:13.914  INFO 6976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-06 15:35:13.981  INFO 6976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 0 repository interfaces.
+2019-07-06 15:35:14.677  INFO 6976 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5fbcdcb5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-06 15:35:15.356  INFO 6976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-06 15:35:15.398  INFO 6976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-06 15:35:15.399  INFO 6976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-07-06 15:35:15.615  INFO 6976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-06 15:35:15.616  INFO 6976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4194 ms
+2019-07-06 15:35:16.835  INFO 6976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-06 15:35:16.971  INFO 6976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-06 15:35:17.169  INFO 6976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-06 15:35:18.144  INFO 6976 --- [restartedMain] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2019-07-06 15:35:18.146  INFO 6976 --- [restartedMain] o.a.e.i.a.AbstractAsyncJobExecutor       : Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+2019-07-06 15:35:18.148  INFO 6976 --- [Thread-22] o.a.e.i.a.AcquireTimerJobsRunnable       : starting to acquire async jobs due
+2019-07-06 15:35:18.150  INFO 6976 --- [Thread-23] o.a.e.i.a.AcquireAsyncJobsDueRunnable    : starting to acquire async jobs due
+2019-07-06 15:35:18.825  INFO 6976 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-06 15:35:19.055  INFO 6976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-06 15:35:19.897  INFO 6976 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-07-06 15:35:19.929  INFO 6976 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-07-06 15:35:19.998  INFO 6976 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-07-06 15:35:20.277  INFO 6976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-06 15:35:20.282  INFO 6976 --- [restartedMain] com.peitu.DoorplateQrcodeApplication     : Started DoorplateQrcodeApplication in 10.405 seconds (JVM running for 13.385)
+2019-07-06 15:35:25.807  INFO 6976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-06 15:35:25.808  INFO 6976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-06 15:35:25.824  INFO 6976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-07-06 15:35:25.937 ERROR 6976 --- [http-nio-8080-exec-1] o.a.t.util.descriptor.web.LoginConfig    : 捕获到Exception异常：java.lang.NullPointerException

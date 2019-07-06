@@ -5,10 +5,7 @@ import com.peitu.doorplateqrcode.service.api.TestService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author Rising
@@ -33,7 +30,7 @@ public class HelloWorldController {
     }
 
     @ApiOperation(value = "一个测试API", notes = "第一个测试的api")
-    @RequestMapping("test-api/{msg}")
+    @PostMapping("test-api/{msg}")
     @ResponseBody
     public String test(@PathVariable String msg) {
         Test test = new Test();
