@@ -1,10 +1,7 @@
 package com.peitu.doorplateqrcode.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.peitu.doorplateqrcode.entity.AdministrativeCode;
 import com.peitu.doorplateqrcode.entity.Test;
 import com.peitu.doorplateqrcode.service.provider.TestServiceImpl;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,20 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
-import java.util.Vector;
 
 /**
  * @author Rising
  * @date 2019/6/11
  */
 @Controller
-public class TestController {
+public class HelloWorldController {
 
     @Autowired
     TestServiceImpl testService;
 
-    @ApiOperation(value = "一个测试API", notes = "第一个测试的api")
-    @RequestMapping("test/{msg}")
+    @RequestMapping("test6/{msg}")
     @ResponseBody
     public String test01(@PathVariable String msg) {
         Test test = new Test();
@@ -66,32 +61,5 @@ public class TestController {
 //            }
 //        }
     }
-
-    public static void test02(String[] args) throws IOException {
-        String content = "{\n" +
-                "  \"pinyin\": \"JieYang\",\n" +
-                "  \"lng\": \"116.372831\",\n" +
-                "  \"level\": 2,\n" +
-                "  \"parent_id\": 508648,\n" +
-                "  \"area_code\": \"445201000000\",\n" +
-                "  \"name\": \"市辖区\",\n" +
-                "  \"merger_name\": \"广东,揭阳\",\n" +
-                "  \"city_code\": \"0663\",\n" +
-                "  \"short_name\": \"揭阳\",\n" +
-                "  \"id\": 508649,\n" +
-                "  \"zip_code\": \"522000\",\n" +
-                "  \"lat\": \"23.549993\"\n" +
-                "}";
-        ObjectMapper mapper = new ObjectMapper();
-        AdministrativeCode code = mapper.readValue(content, AdministrativeCode.class);
-        System.out.println(code);
-        System.out.println(mapper.writeValueAsString(code));
-
-
-    }
-
-
-
-
 
 }

@@ -16,6 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * 自动构建API文档
  * http://{url}:{port}/swagger-ui.html
+ * 配合 WebMvcConfig 加载静态资源
  *
  * @author Rising
  * @date 2019/6/27

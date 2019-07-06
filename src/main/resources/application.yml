@@ -20,9 +20,19 @@ spring:
         min-idle: 1
   activiti:
     db-history-used: true
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
 
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: countSql
 
 logging:
   level:

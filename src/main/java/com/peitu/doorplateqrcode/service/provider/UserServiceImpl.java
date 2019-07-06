@@ -2,7 +2,7 @@ package com.peitu.doorplateqrcode.service.provider;
 
 import com.peitu.doorplateqrcode.entity.User;
 import com.peitu.doorplateqrcode.mapper.UserMapper;
-import com.peitu.commons.result.MsgUtil;
+import com.peitu.commons.result.ResultUtil;
 import com.peitu.commons.result.ResultCode;
 import com.peitu.doorplateqrcode.service.api.UserService;
 import com.peitu.doorplateqrcode.vo.UserRequest;
@@ -28,11 +28,11 @@ public class UserServiceImpl implements UserService {
     public Object verify(UserRequest userRequest) {
         User user = userMapper.selectByPrimaryKey(1);
         if (!user.getUserName().equals(userRequest.getUserName())) {
-            return MsgUtil.retMsg(ResultCode.用户不存在);
+            return ResultUtil.setMsg(ResultCode.用户不存在);
         } else if (!user.getPassword().equals(userRequest.getPassword())) {
-            return MsgUtil.retMsg(ResultCode.密码错误);
+            return ResultUtil.setMsg(ResultCode.密码错误);
         } else {
-            return MsgUtil.retMsg(ResultCode.成功, user);
+            return ResultUtil.setMsg(user);
         }
     }
 }

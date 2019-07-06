@@ -2,7 +2,7 @@ package com.peitu.doorplateqrcode.controller;
 
 import com.peitu.commons.image.SlidingBlock;
 import com.peitu.doorplateqrcode.dto.SlidingBlockData;
-import com.peitu.commons.result.MsgUtil;
+import com.peitu.commons.result.ResultUtil;
 import com.peitu.commons.result.ResultCode;
 import org.apache.tomcat.util.descriptor.web.LoginConfig;
 import org.slf4j.Logger;
@@ -24,9 +24,9 @@ public class BlockVerifyController {
     public Object getPic() {
         SlidingBlockData blockData = SlidingBlock.slidingBlock();
         if (blockData == null) {
-            return MsgUtil.retMsg(ResultCode.接口异常);
+            return ResultUtil.setMsg(ResultCode.接口异常);
         }
-        return MsgUtil.retMsg(ResultCode.成功, blockData);
+        return ResultUtil.setMsg(blockData);
     }
 
 

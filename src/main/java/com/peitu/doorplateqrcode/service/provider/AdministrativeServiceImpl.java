@@ -5,7 +5,7 @@ import com.peitu.commons.api.DemoForArea;
 import com.peitu.commons.api.Response;
 import com.peitu.doorplateqrcode.entity.AdministrativeCode;
 import com.peitu.doorplateqrcode.mapper.AdministrativeCodeMapper;
-import com.peitu.commons.result.MsgUtil;
+import com.peitu.commons.result.ResultUtil;
 import com.peitu.commons.result.ResultCode;
 import com.peitu.doorplateqrcode.service.api.AdministrativeService;
 import org.apache.tomcat.util.descriptor.web.LoginConfig;
@@ -43,6 +43,6 @@ public class AdministrativeServiceImpl implements AdministrativeService {
             e.printStackTrace();
         }
 
-        return MsgUtil.retMsg(ResultCode.成功);
+        return ResultUtil.setMsg(ResultCode.成功);
     }
 }

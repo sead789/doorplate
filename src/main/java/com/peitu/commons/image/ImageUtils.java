@@ -28,7 +28,7 @@ public class ImageUtils {
 
     private static final int PIC_NUM = 7;
     private static final String FORMAT = ".jpg";
-    private static final String PATH = "static/image/block/";
+    private static final String PATH = "static/images/block/";
 
     /**
      * 随机获取图片
@@ -425,7 +425,7 @@ public class ImageUtils {
         try {
             image = ImageIO.read(input);
 
-            // get all image writers for JPG format
+            // get all images writers for JPG format
             Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("jpeg");
 
             if (!writers.hasNext()) {
@@ -443,8 +443,8 @@ public class ImageUtils {
             param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
             param.setCompressionQuality(quality);
 
-            // appends a complete image stream containing a single image and
-            // associated stream and image metadata and thumbnails to the output
+            // appends a complete images stream containing a single images and
+            // associated stream and images metadata and thumbnails to the output
             writer.write(null, new IIOImage(image, null, null), param);
         } catch (IOException e) {
             e.printStackTrace();
@@ -589,7 +589,7 @@ public class ImageUtils {
             g2.setColor(Color.WHITE);
             g2.fill(new RoundRectangle2D.Float(0, 0, w, h, cornerRadius, cornerRadius));
 
-            // ... then compositing the image on top,
+            // ... then compositing the images on top,
             // using the white shape from above as alpha source
             g2.setComposite(AlphaComposite.SrcAtop);
             g2.drawImage(sourceImage, 0, 0, null);
@@ -601,7 +601,7 @@ public class ImageUtils {
         }
     }
 
-    private static final String BASE_64_PREFIX = "data:image/jpeg;base64,";
+    private static final String BASE_64_PREFIX = "data:images/jpeg;base64,";
 
     /**
      * BufferedImage 转 base64

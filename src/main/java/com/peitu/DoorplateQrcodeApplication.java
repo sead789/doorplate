@@ -1,4 +1,4 @@
-package com.peitu.doorplateqrcode;
+package com.peitu;
 
 import org.activiti.spring.boot.SecurityAutoConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
@@ -15,6 +15,8 @@ import org.springframework.cache.annotation.EnableCaching;
         "com.peitu.commons.redis",
         "com.peitu.commons.activiti",
         "com.peitu.swagger",
+        "com.peitu.config",
+        "com.peitu.exception",
         "com.peitu.bpmn"
 }, exclude = SecurityAutoConfiguration.class)
 @MapperScan("com.peitu.doorplateqrcode.mapper")
